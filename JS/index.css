@@ -1,0 +1,12 @@
+#title {
+  color: red;
+}
+.head {
+  color: blue;
+}
+p {
+  color: green;
+}
+#click:hover {
+  background-color: yellow;
+}
