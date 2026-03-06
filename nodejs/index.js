@@ -4,10 +4,11 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello, Aryan!' });
-});
+// app.get('/', (req, res) => {
+//   res.json({ message: 'Hello, Aryan!' });
+// });
 
 app.get('/info', (req, res) => {
     const qp = req.query;
