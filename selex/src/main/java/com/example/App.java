@@ -6,9 +6,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class App {
+    getDriver driver = new getDriver();
+    public String getTitle() {
+        WebDriver driver = this.driver.chromWebDriver();
+
+        driver.get("https://www.google.com");
+        String title = driver.getTitle();
+        driver.quit();
+
+        return title;
+    }
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        
+
         // Create WebDriver instance
         WebDriver driver = new ChromeDriver();
 

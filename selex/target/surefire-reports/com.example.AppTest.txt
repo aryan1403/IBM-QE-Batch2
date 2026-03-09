@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.example.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.example.AppTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.388 s <<< FAILURE! - in com.example.AppTest
+getTitle(com.example.AppTest)  Time elapsed: 0.374 s  <<< ERROR!
+io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at com.example.AppTest.getTitle(AppTest.java:20)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at com.example.AppTest.getTitle(AppTest.java:20)
+Caused by: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at com.example.AppTest.getTitle(AppTest.java:20)
+
