@@ -5,10 +5,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Wait;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class App {
     getDriver driver = new getDriver();
@@ -55,7 +51,17 @@ public class App {
         // // Close browser
         // driver.quit();
 
-        App app = new App();
-        app.search();
+        // App app = new App();
+        // app.search();
+        DatabaseManager db1 = DatabaseManager.getInstance();
+        
+        DatabaseManager db2 = DatabaseManager.getInstance();
+
+        System.out.println(db1 == db2);
+
+        // Singleton s1 = Singleton.getInstance();
+        // Singleton s2 = Singleton.getInstance();
+
+        // System.out.println(s1 == s2);
     }
 }
