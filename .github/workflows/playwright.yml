@@ -1,47 +1,86 @@
-name: Playwright Tests & Allure Report
-
+name: Playwright Optimized CI
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
 
-# Required permissions for the peaceiris/actions-gh-pages step to push to the gh-pages branch
 permissions:
   contents: write
   pages: write
   id-token: write
 
 jobs:
-  test-and-report:
+  test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    
+    strategy:
+      fail-fast: false
+      matrix:
+        # Optimization: Runs 2 shards in parallel. 
+        # Increase these numbers (e.g., 1, 2, 3 and total: 3) to go even faster.
+        shardIndex: [1, 2]
+        shardTotal: [2]
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        
-    - name: Install Dependencies
+        cache: 'npm' # Optimization: Caches npm dependencies automatically
+
+    - name: Install dependencies
       run: npm ci
-      
+
+    - name: Get Playwright Version
+      id: playwright-version
+      run: echo "version=$(npx playwright --version | cut -d' ' -f2)" >> $GITHUB_OUTPUT
+
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
+
     - name: Install Playwright Browsers
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: npx playwright install --with-deps
-      
-    - name: Run Playwright Tests
-      run: npx playwright test
-      continue-on-error: true # Ensures the workflow continues to generate the report even if tests fail
-      
+
+    - name: Run Playwright tests
+      # Optimization: Uses sharding to split tests across VMs
+      run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+      continue-on-error: true
+
+    - name: Upload Allure Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-results-${{ matrix.shardIndex }}
+        path: allure-results/
+        retention-days: 1
+
+  deploy:
+    # This job only runs after all shards in the 'test' job are finished
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download All Shard Results
+      uses: actions/download-artifact@v4
+      with:
+        path: all-results
+        pattern: allure-results-*
+        merge-multiple: true
+
     - name: Generate Allure Report
-      if: always() # Runs regardless of test success/failure
-      run: npx allure generate allure-results -o allure-report --clean
-      
+      run: |
+        npx allure generate all-results -o allure-report --clean
+
     - name: Deploy to GitHub Pages
-      if: always() # Runs regardless of test success/failure
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
