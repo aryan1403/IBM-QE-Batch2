@@ -1,0 +1,137 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - paragraph [ref=e3]:
+    - link "PMP Practice" [ref=e4] [cursor=pointer]:
+      - /url: https://pmp.expandtesting.com/
+    - text: "| Free PMP Certification Mock Exam Test +900 Questions & Quizzes"
+    - link "Manual Testing services" [ref=e5] [cursor=pointer]:
+      - img [ref=e7]
+      - text: Manual Testing services
+  - banner [ref=e10]:
+    - navigation "Main navigation" [ref=e11]:
+      - link "SUT" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - 'img "Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman." [ref=e13]'
+        - text: Practice
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - button "Demos" [ref=e17] [cursor=pointer]
+          - listitem [ref=e18]:
+            - link "Tools" [ref=e19] [cursor=pointer]:
+              - /url: /#tools
+          - listitem [ref=e20]:
+            - link "Tips" [ref=e21] [cursor=pointer]:
+              - /url: /tips
+          - listitem [ref=e22]:
+            - link "Test Cases" [ref=e23] [cursor=pointer]:
+              - /url: /test-cases
+          - listitem [ref=e24]:
+            - link "API Testing" [ref=e25] [cursor=pointer]:
+              - /url: /notes/api/api-docs/
+          - listitem [ref=e26]:
+            - link "About" [ref=e27] [cursor=pointer]:
+              - /url: /about
+        - list
+        - link "Free ISTQB Mock Exams" [ref=e28] [cursor=pointer]:
+          - /url: https://istqb.expandtesting.com/
+  - main [ref=e29]:
+    - paragraph [ref=e34]:
+      - text: Do you enjoy this platform? ❤️
+      - link "Buy us a coffee" [ref=e35] [cursor=pointer]:
+        - /url: https://www.buymeacoffee.com/expandtesting
+    - generic [ref=e36]:
+      - insertion [ref=e38]:
+        - generic [ref=e41]:
+          - heading "These are topics related to the article that might interest you" [level=2] [ref=e43]: Discover more
+          - link "API" [ref=e44] [cursor=pointer]:
+            - generic "API" [ref=e45]
+            - img [ref=e47]
+          - link "automated tests" [ref=e49] [cursor=pointer]:
+            - generic "automated tests" [ref=e50]
+            - img [ref=e52]
+          - link "Rest" [ref=e54] [cursor=pointer]:
+            - generic "Rest" [ref=e55]
+            - img [ref=e57]
+          - link "Software Testing" [ref=e59] [cursor=pointer]:
+            - generic "Software Testing" [ref=e60]
+            - img [ref=e62]
+          - link "Test" [ref=e64] [cursor=pointer]:
+            - generic "Test" [ref=e65]
+            - img [ref=e67]
+          - link "email" [ref=e69] [cursor=pointer]:
+            - generic "email" [ref=e70]
+            - img [ref=e72]
+          - link "Testing" [ref=e74] [cursor=pointer]:
+            - generic "Testing" [ref=e75]
+            - img [ref=e77]
+          - link "Test Automation" [ref=e79] [cursor=pointer]:
+            - generic "Test Automation" [ref=e80]
+            - img [ref=e82]
+      - generic [ref=e86]:
+        - navigation "breadcrumb mb-2" [ref=e87]:
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - link "Home" [ref=e90] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e91]: / Forgot Password
+        - heading "Dummy Forgot Password form page for Automation Testing Practice" [level=1] [ref=e92]
+        - paragraph [ref=e93]:
+          - text: Example can be used for practicing the Forgot Password scenario in automated tests. An
+          - link "email" [ref=e94] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e95]
+            - text: email
+          - text: will be sent to indicate password reset instructions
+          - link "Automation practice website" [ref=e97] [cursor=pointer]:
+            - img [ref=e99]
+            - text: Automation practice website
+        - generic [ref=e105]:
+          - generic [ref=e107]:
+            - generic [ref=e108]: E-mail
+            - textbox "E-mail" [ref=e109]: shekhawat09mss@gmail.com
+          - button "Retrieve password" [ref=e110] [cursor=pointer]
+      - insertion [ref=e112]:
+        - generic [ref=e115]:
+          - heading "These are topics related to the article that might interest you" [level=2] [ref=e117]: Discover more
+          - link "Web UI" [ref=e118] [cursor=pointer]:
+            - generic "Web UI" [ref=e119]
+            - img [ref=e121]
+          - link "Email" [ref=e123] [cursor=pointer]:
+            - generic "Email" [ref=e124]
+            - img [ref=e126]
+          - link "User interface" [ref=e128] [cursor=pointer]:
+            - generic "User interface" [ref=e129]
+            - img [ref=e131]
+          - link "E-mail" [ref=e133] [cursor=pointer]:
+            - generic "E-mail" [ref=e134]
+            - img [ref=e136]
+          - link "Automation Testing" [ref=e138] [cursor=pointer]:
+            - generic "Automation Testing" [ref=e139]
+            - img [ref=e141]
+          - link "Test automation" [ref=e143] [cursor=pointer]:
+            - generic "Test automation" [ref=e144]
+            - img [ref=e146]
+          - link "Web interface" [ref=e148] [cursor=pointer]:
+            - generic "Web interface" [ref=e149]
+            - img [ref=e151]
+          - link "UI" [ref=e153] [cursor=pointer]:
+            - generic "UI" [ref=e154]
+            - img [ref=e156]
+  - contentinfo [ref=e158]:
+    - generic [ref=e163]:
+      - heading "Practice Test Automation WebSite for Web UI and Rest API" [level=4] [ref=e164]
+      - paragraph [ref=e165]:
+        - text: "Version: e64cd80e | Copyright"
+        - link "Expand Testing" [ref=e166] [cursor=pointer]:
+          - /url: https://expandtesting.com/
+        - text: "2026"
+  - img [ref=e168] [cursor=pointer]
+  - generic [ref=e170]:
+    - generic [ref=e171] [cursor=pointer]:
+      - img [ref=e173]
+      - link "Go to shopping options for Email & Messaging" [ref=e175]: Email & Messaging
+    - button "Close shopping anchor" [ref=e176]
+```
