@@ -1,0 +1,14 @@
+[
+  [ 'Name', 'CPU', 'Disk', 'Memory', 'Network' ],
+  [ 'Chrome', '8.7%', '0.4 MB/s', '80.7 MB', '5.4 Mbps' ],
+  [ 'Firefox', '6.7%', '0.7 MB/s', '86.9 MB', '2.4 Mbps' ],
+  [ 'Internet Explorer', '0.5%', '0.3 MB/s', '70.7 MB', '3.6 Mbps' ],
+  [ 'System', '7.7%', '0.5 MB/s', '19.3 MB', '0 Mbps' ]
+]
+[
+  [ 'Name', 'CPU', 'Disk', 'Memory', 'Network' ],
+  [ 'Chrome', '8.7%', '0.4 MB/s', '80.7 MB', '5.4 Mbps' ],
+  [ 'Firefox', '6.7%', '0.7 MB/s', '86.9 MB', '2.4 Mbps' ],
+  [ 'Internet Explorer', '0.5%', '0.3 MB/s', '70.7 MB', '3.6 Mbps' ],
+  [ 'System', '7.7%', '0.5 MB/s', '19.3 MB', '0 Mbps' ]
+]
