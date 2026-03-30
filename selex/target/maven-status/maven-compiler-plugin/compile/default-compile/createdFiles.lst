@@ -1,2 +1,6 @@
+com/example/Singleton$Holder.class
 com/example/App.class
+com/example/DatabaseManager.class
+com/example/contact.class
+com/example/Singleton.class
 com/example/getDriver.class

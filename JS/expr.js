@@ -13,7 +13,7 @@ function readHTML(filePath) {
     }
 }
 
-app.get('/', (req, res) => res.json({ message: "Welcome to the Home Page" }));
+// app.get('/', (req, res) => res.json({ message: "Welcome to the Home Page" }));
 
 app.get('/contact', (req, res) => res.send(readHTML('./contact.html')));
 
